@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Smart Street Light | Secure Login
+  </title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+
+      margin: 0;
+
+      min-height: 100vh;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      background:
+        radial-gradient(
+          circle at center,
+          #10253a 0%,
+          #07111c 45%,
+          #03070b 100%
+        );
+
+      color: #e8f7ff;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+    }
+
+
+    .login-card {
+
+      width: min(
+        420px,
+        calc(100% - 32px)
+      );
+
+      padding: 34px;
+
+      border:
+        1px solid
+        rgba(0, 220, 255, 0.35);
+
+      border-radius: 16px;
+
+      background:
+        rgba(5, 15, 25, 0.92);
+
+      box-shadow:
+        0 0 50px
+        rgba(0, 200, 255, 0.12);
+
+      backdrop-filter:
+        blur(12px);
+    }
+
+
+    .logo {
+
+      text-align: center;
+
+      font-size: 36px;
+
+      margin-bottom: 10px;
+    }
+
+
+    h1 {
+
+      text-align: center;
+
+      margin:
+        0 0 8px;
+
+      font-size: 22px;
+
+      letter-spacing: 2px;
+    }
+
+
+    .subtitle {
+
+      text-align: center;
+
+      color: #83a7b8;
+
+      font-size: 13px;
+
+      margin-bottom: 28px;
+    }
+
+
+    label {
+
+      display: block;
+
+      margin-bottom: 7px;
+
+      color: #8fb4c6;
+
+      font-size: 13px;
+    }
+
+
+    input {
+
+      width: 100%;
+
+      padding: 13px 14px;
+
+      margin-bottom: 18px;
+
+      border-radius: 8px;
+
+      border:
+        1px solid
+        rgba(0, 220, 255, 0.25);
+
+      background: #07131f;
+
+      color: white;
+
+      outline: none;
+
+      font-size: 14px;
+    }
+
+
+    input:focus {
+
+      border-color:
+        #00d9ff;
+
+      box-shadow:
+        0 0 12px
+        rgba(0, 217, 255, 0.15);
+    }
+
+
+    button {
+
+      width: 100%;
+
+      padding: 13px;
+
+      border: none;
+
+      border-radius: 8px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #008fc4,
+          #00d9ff
+        );
+
+      color: #00131c;
+
+      font-weight: 800;
+
+      letter-spacing: 1px;
+
+      cursor: pointer;
+    }
+
+
+    button:disabled {
+
+      opacity: 0.6;
+
+      cursor: wait;
+    }
+
+
+    #loginError {
+
+      min-height: 20px;
+
+      margin-top: 16px;
+
+      color: #ff6675;
+
+      text-align: center;
+
+      font-size: 13px;
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+  <main class="login-card">
+
+    <div class="logo">
+      💡
+    </div>
+
+    <h1>
+      SMART STREET LIGHT
+    </h1>
+
+    <div class="subtitle">
+      SECURE NETWORK ACCESS
+    </div>
+
+
+    <form id="loginForm">
+
+      <label for="loginEmail">
+        Email
+      </label>
+
+      <input
+        id="loginEmail"
+        type="email"
+        autocomplete="username"
+        placeholder="operator@example.com"
+        required
+      >
+
+
+      <label for="loginPassword">
+        Password
+      </label>
+
+      <input
+        id="loginPassword"
+        type="password"
+        autocomplete="current-password"
+        placeholder="Password"
+        required
+      >
+
+
+      <button
+        id="loginButton"
+        type="submit"
+      >
+        LOGIN
+      </button>
+
+
+      <div id="loginError"></div>
+
+    </form>
+
+  </main>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <script src="js/supabase.js"></script>
+
+  <script src="js/login.js"></script>
+
+</body>
+
+</html>
